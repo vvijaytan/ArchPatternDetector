@@ -1,0 +1,19 @@
+data:
+  synthetic_dir: data/synthetic_plantuml
+  real_dir: data/raw
+  processed_dir: data/processed
+  num_synthetic: 5000
+
+model:
+  patterns: ['Singleton', 'Factory', 'Observer', 'Strategy']  # Expand to 13
+  qualities: ['scalability', 'maintainability', 'performance']
+  hidden_dim: 128
+  num_gnn_layers: 3
+
+training:
+  epochs: 50
+  batch_size: 32
+  lr: 0.001
+
+paths:
+  model_path: models/best_model.pt
